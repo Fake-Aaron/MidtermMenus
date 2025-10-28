@@ -1,13 +1,26 @@
-# Welcome to your Expo app 👋
+# Expo X Zustand X Supabase Menu CRUD App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is an Expo powered React Native application integrated with Zustand and Supabase database as a prototype to a restaurant's menu system
+This application was made as a Midterm examination Project, bear with me, im very new to this
 
-## Get started
+FEATURES:
+= Staff Login with Supabase Auth
+= CRUD Operations on menu items
+= Navigation using Expo
+= Themed UI based on the restaurant
 
-1. Install dependencies
+## Setup Instructions
+1. Clone the repository, or download it
+
+   ```bash
+   git clone https://github.com/Fake-Aaron/MidtermMenus.git
+   ```
+2. Install dependencies
 
    ```bash
    npm install
+   # or
+   yarn install
    ```
 
 2. Start the app
@@ -16,35 +29,20 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. In the event that the project isnt linked to the Supabase i have (or doesnt work anymore):
+= Create a new project at Supabase
+= Copy your project url and anon/public key
+= Update /lib/supabase.ts file, and change the url and key to your project
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+After this, you may populate the data from supabase, or from the app itself. make sure to add a user on supabase first
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+IMPORTANT NOTE: The code for staffLogin.tsx does NOT have a register button. This is done to emulate the fact that restaurants do not use register buttons in app. They usually have a tech expert making your account. If you need or want to access the CRUD functions from the staffPanel, Please contact me (Discord: fake_aaron) to help you set up an authenticated account.
 
-## Get a fresh project
+Tech Stack
+= Expo (React Native)
+= Supabase
+= Zustand
+= TypeScript
+= React Navigation / Expo Router
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+If youre reading this, and youre the teacher inspecting my code, hi! please contact me after you see this, this project may be eligible for wild card purposes
