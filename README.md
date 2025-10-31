@@ -30,19 +30,27 @@ FEATURES:
    ```
 
 3. In the event that the project isnt linked to the Supabase i have (or doesnt work anymore):
+
 = Create a new project at Supabase
+
 = Copy your project url and anon/public key
+
 = Update /lib/supabase.ts file, and change the url and key to your project
 
-After this, you may populate the data from supabase, or from the app itself. make sure to add a user on supabase first
+After this, you may populate the data from supabase, or from the app itself. make sure to add a user on supabase first, and to make sure all the names match the code so they can pull the data.
 
 IMPORTANT NOTE: The code for staffLogin.tsx does NOT have a register button. This is done to emulate the fact that restaurants do not use register buttons in app. They usually have a tech expert making your account. If you need or want to access the CRUD functions from the staffPanel, Please contact me (Discord: fake_aaron) to help you set up an authenticated account.
 
 Tech Stack
+
 = Expo (React Native)
+
 = Supabase
+
 = Zustand
+
 = TypeScript
+
 = React Navigation / Expo Router
 
 If youre reading this, and youre the teacher inspecting my code, hi! please contact me after you see this, this project may be eligible for wild card purposes

@@ -99,6 +99,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#eee",
   },
+  orderNum: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#333",
+    marginBottom: 4,
+  },
   orderName: {
     fontSize: 16,
     fontWeight: "600",
