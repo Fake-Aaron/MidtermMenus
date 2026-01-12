@@ -4,10 +4,16 @@ This is an Expo powered React Native application integrated with Zustand and Sup
 This application was made as a Midterm examination Project, bear with me, im very new to this
 
 FEATURES:
+
 = Staff Login with Supabase Auth
+
 = CRUD Operations on menu items
+
 = Navigation using Expo
+
 = Themed UI based on the restaurant
+
+= Order Forms, Deep Linking, and Virtual Deferred Deep Linking
 
 ## Setup Instructions
 1. Clone the repository, or download it
@@ -41,6 +47,8 @@ After this, you may populate the data from supabase, or from the app itself. mak
 
 IMPORTANT NOTE: The code for staffLogin.tsx does NOT have a register button. This is done to emulate the fact that restaurants do not use register buttons in app. They usually have a tech expert making your account. If you need or want to access the CRUD functions from the staffPanel, Please contact me (Discord: fake_aaron) to help you set up an authenticated account.
 
+Also, this app supports deferred deep linking, but i havent built the app yet, so i used AsyncStorage to simulate it
+
 Tech Stack
 
 = Expo (React Native)
@@ -53,4 +61,4 @@ Tech Stack
 
 = React Navigation / Expo Router
 
-If youre reading this, and youre the teacher inspecting my code, hi! please contact me after you see this, this project may be eligible for wild card purposes
+If youre reading this, and youre the teacher inspecting my code, hi! Please give me a review on my work, itll be greatly appreciated!
