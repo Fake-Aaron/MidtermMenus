@@ -7,11 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "midtermmenus",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "permissions": [],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -19,7 +20,8 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.aaronst.midtermmenus"
     },
     "web": {
       "output": "static",
@@ -38,11 +40,27 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+       ["expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "2.0.21",
+            "react": {
+              "enableBundleCompression": false
+            }
+          }
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": false
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "77743dc3-fdae-4d3f-a0b3-78c03d93ad2c"
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
+import 'react-native-reanimated';
 
 export default function TabLayout() {
   return (

@@ -13,6 +13,10 @@ export default function MenuScreen() {
   const [orders, setOrders] = useState<any[]>([]);
   const [showOrders, setShowOrders] = useState(false);
   const [pendingOrders, setPendingOrders] = useState<string[]>([]);
+  const handleDeleteItem = (index: number) => {
+  setPendingOrders((prev) => prev.filter((_, i) => i !== index));
+  };
+
 
   // Fetch menus and orders from Supabase
   useEffect(() => {
@@ -143,6 +147,7 @@ export default function MenuScreen() {
         onClose={() => setShowOrders(false)}
         pendingOrders={pendingOrders}
         onSubmit={submitOrders}
+        onDeleteItem={handleDeleteItem}
       />
 
       {/* Menu List */}
@@ -156,12 +161,12 @@ export default function MenuScreen() {
                 android_ripple={{ color: `${JASPER_ORANGE}33` }}
                 style={styles.item}
                 onPress={() => router.push({ 
-                  pathname: "/(modals)/menuDetail",  
+                  pathname: "/menu/[id]",  
                   params: item 
                 })}
               >
                 <View style={styles.itemContent}>
-                  <Image source={{ uri: item.image_url }} style={styles.image} />
+                  <Image source={{ uri: item.image }} style={styles.image} />
                   <View style={styles.textContent}>
                     <Text style={styles.name}>{item.name}</Text>
                     <Text style={styles.category}>{item.category}</Text>

@@ -8,9 +8,10 @@ interface OrderModalProps {
   onClose: () => void;
   pendingOrders: string[];
   onSubmit: (phoneNumber: string) => Promise<void>;
+  onDeleteItem: (index: number) => void;
 }
 
-export function OrderModal({ visible, onClose, pendingOrders, onSubmit }: OrderModalProps) {
+export function OrderModal({ visible, onClose, pendingOrders, onSubmit, onDeleteItem }: OrderModalProps) {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const handleSubmit = () => {
@@ -35,6 +36,12 @@ export function OrderModal({ visible, onClose, pendingOrders, onSubmit }: OrderM
               <View style={styles.orderItem}>
                 <Text style={styles.orderNum}>Item #{index + 1}</Text>
                 <Text style={styles.orderName}>{item}</Text>
+                <TouchableOpacity
+                  style={styles.deleteBtn}
+                  onPress={() => onDeleteItem(index)}
+                >
+                  <Text style={styles.deleteBtnText}>Delete</Text>
+                </TouchableOpacity>
               </View>
             )}
             ListEmptyComponent={() => (
@@ -95,10 +102,17 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   orderItem: {
-    padding: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "#eee",
-  },
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: 12,
+  borderBottomWidth: 1,
+  borderBottomColor: "#eee",
+},
+orderText: {
+  flex: 1,
+  marginRight: 12,
+},
   orderNum: {
     fontSize: 14,
     fontWeight: "600",
@@ -155,5 +169,17 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '700',
     fontSize: 16,
+  },
+  deleteBtn: {
+    backgroundColor: "#c0392b",
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+  },
+
+  deleteBtnText: {
+   color: "#fff",
+   fontWeight: "700",
+   fontSize: 14,
   },
 });
